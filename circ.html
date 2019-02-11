@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="circ.css">
+</head>
+<html>
+    
+<body>
+      
+	<canvas id="c1" >
+		<!-- Your browser does not support the HTML5 canvas tag. -->
+	</canvas>
+
+	<script>
+		var c = document.getElementById("c1");
+		var c1_el = c.getContext("2d");
+		c1_el.beginPath();
+		c1_el.arc(100, 75, 50, 0, 2 * Math.PI);
+//        x,y,radius
+		c1_el.stroke();
+        c1_el.fillStyle = "#FF0000";
+         c1_el.fill(20, 20, 150, 100);
+//        c1_el.fillRect(20, 20, 150, 100);
+	</script> 
+
+</body>
+</html>
