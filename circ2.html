@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   <head>
+<link rel="stylesheet" href="circ.css">
+</head>
+      <style>
+         #canvasarea
+         {
+            border:black 1px solid;
+         }
+      </style>
+      <!--[IF LT IE 9]><script type="text/javascript" src = "excanvas.js" ></script><![endif]-->
+      <script type="text/javascript">
+         function setcanvas()
+         {
+            var canvas = document.getElementById("canvasarea");
+            if (canvas.getContext)
+            {
+               var ctx = canvas.getContext("2d");
+               drawcanvas(ctx);
+            }
+            else
+            {
+               alert("Canvas NOT supported");
+            }
+         }
+         
+         function drawcanvas(ctx)
+         {
+
+               //Shape0;
+               ctx.lineWidth = 1;
+               ctx.beginPath();
+               ctx.moveTo(300,114);
+               ctx.bezierCurveTo(364,114,416,172,416,243);
+               ctx.bezierCurveTo(416,314,364,372,300,372);
+               ctx.bezierCurveTo(235,372,183,314,183,243);
+               ctx.bezierCurveTo(183,172,235,114,300,114);
+               ctx.closePath();
+               ctx.stroke();
+             
+               ctx.fillStyle = "rgb(255, 0, 0)";
+               ctx.fill();
+         }
+      </script>
+   </head>
+   <body onload="setcanvas()">
+      <canvas id="canvasarea" width="1000" height="1000"></canvas>
+   </body>
+</html>
